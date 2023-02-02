@@ -1,0 +1,469 @@
+
+/* .section1{
+    background-image: url('Background1.jpg');   
+} */
+.section2{
+    background-image: url('Background2.jpg');
+    
+}
+.section3{
+    background-image: url('Background3.jpg');
+}
+/* Main Container Configration */
+.mainContainer{
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+}
+.section1,.section2,.section3{
+    height: 100vh;
+    background-size: cover;
+    scroll-snap-align: start;
+}
+
+/* Overlay effect */
+.overlay{
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+}
+
+/* slider */
+.navigation{
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    right: 5%;
+    list-style: none;
+    top: 50%;
+    transform: translatey(-50%);
+    z-index: 10;
+    
+}
+.navigation li{
+    width: 10px;
+    height: 10px;
+    background: #333;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    margin-top: 20px;
+    transition:all 0.3s
+}
+.navigation li:hover,.navigation li.selected{
+    transform:scale(1.5);
+}
+
+/* Indicators end here*/
+/* 
+.wrapper{
+    display: inline-flex;
+}
+.wrapper .static-text{
+    color: black;
+    font-size: 3rem;
+    
+}
+ .wrapper .dynamic-txts{
+
+    overflow: hidden;
+    margin-left: 0;
+    height: 70px; 
+
+} 
+.dynamic-txts li{
+    list-style: none;
+    font-size: 3rem;
+    color:seagreen;
+    position: relative;
+    top: 0;
+    animation : slide 4s steps(4) infinite;
+}
+@keyframes slide{
+    100%{
+        top: -290px;
+
+    }
+}
+.dynamic-txts li span{
+    position: relative;
+    
+}
+.dynamic-txts li span::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 110%;
+    width: 100%;
+    background-color: #FBFBFB;
+    border-left: 2px solid seagreen;
+    
+    animation: typing 1s steps(10) infinite;
+}
+@keyframes typing {
+    100%{
+        left: 100%;
+        
+        margin: 0 -36px 0 50px;
+    }
+    
+} */
+
+#mainNav {
+  min-height: 3.5rem;
+  background-color: rgb(10, 10, 10);
+}
+#mainNav .navbar-toggler {
+  font-size: 80%;
+  padding: 0.75rem;
+  color: #64a19d;
+  border: 1px solid #64a19d;
+}
+#mainNav .navbar-toggler:focus {
+  
+  outline: none;
+}
+#mainNav .navbar-brand {
+  color: #fff;
+  font-weight: 700;
+  padding: 0.9rem 0;
+}
+ #mainNav .navbar-nav .nav-item .nav-link{color:rgba(255, 255, 255, 0.5);}
+ #mainNav .navbar-nav .nav-item .nav-link:hover{color: rgba(255, 255, 255, 0.75)} 
+#mainNav .navbar-nav .nav-item:hover {
+  color: fade(#fff, 10%);
+  outline: none;
+  background-color: transparent;
+}
+#mainNav .navbar-nav .nav-item:active, #mainNav .navbar-nav .nav-item:focus {
+  outline: none;
+  background-color: transparent;
+}
+@media (min-width: 992px) {
+  #mainNav {
+    padding-top: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+    background-color: rgb(10, 10, 10);
+    transition: background-color 0.3s ease-in-out;
+  }
+  #mainNav .navbar-brand {
+    padding: 0.5rem 0;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  #mainNav .nav-link {
+    transition: none;
+    padding: 2rem 1.5rem;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  #mainNav .nav-link:hover {
+    color: rgba(255, 255, 255, 0.75);
+  }
+  #mainNav .nav-link:active {
+    color: #fff;
+  }
+  #mainNav.navbar-shrink {
+    background-color: rgb(10, 10, 10,0.5);
+  }
+  #mainNav.navbar-shrink .navbar-brand {
+    color: #fff;
+  }
+  #mainNav.navbar-shrink .nav-link {
+    color: #fff;
+    padding: 1.5rem 1.5rem 1.25rem;
+    border-bottom: 0.25rem solid transparent;
+  }
+  #mainNav.navbar-shrink .nav-link:hover {
+    color: #64a19d;
+  }
+  #mainNav.navbar-shrink .nav-link:active {
+    color: #467370;
+  }
+  #mainNav.navbar-shrink .nav-link.active {
+    color: #64a19d;
+    outline: none;
+    border-bottom: 0.25rem solid #64a19d;
+  }
+}
+
+/* After Nav */
+.masthead {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 35rem;
+    padding: 15rem 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url('Background3.jpg');
+    background-position: TOP;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+  }
+  .masthead h1, .masthead .h1 {
+    font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    letter-spacing: 0.8rem;
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+            background-clip: text;
+  }
+  .masthead h2, .masthead .h2 {
+    max-width: 20rem;
+    font-size: 1rem;
+  }
+  @media (min-width: 768px) {
+    .masthead h1, .masthead .h1 {
+      font-size: 4rem;
+      line-height: 4rem;
+    }
+  }
+  @media (min-width: 992px) {
+    .masthead {
+      height: 100vh;
+      padding: 0;
+    }
+    .masthead h1, .masthead .h1 {
+      font-size: 6.5rem;
+      line-height: 6.5rem;
+      letter-spacing: 0.8rem;
+    }
+    .masthead h2, .masthead .h2 {
+      max-width: 30rem;
+      font-size: 1.25rem;
+    }
+  }
+
+
+  /* About section */
+  .about-section {
+    padding-top: 10rem;
+    background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.9) 75%, rgba(0, 0, 0, 0.8) 100%);
+  }
+  .about-section p {
+    margin-bottom: 5rem;
+  }
+
+  /* projects form */
+
+  .projects-section {
+    padding: 10rem 0;
+  }
+  .projects-section .featured-text {
+    padding: 2rem;
+  }
+  @media (min-width: 992px) {
+    .projects-section .featured-text {
+      padding: 0 0 0 2rem;
+      border-left: 0.5rem solid #64a19d;
+    }
+  }
+  .projects-section .project-text {
+    padding: 3rem;
+    font-size: 90%;
+  }
+  @media (min-width: 992px) {
+    .projects-section .project-text {
+      padding: 5rem;
+    }
+    .projects-section .project-text hr {
+      border-color: #64a19d;
+      border-width: 0.25rem;
+      width: 30%;
+    }
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /*sign up  */
+
+  .signup-section {
+    padding: 10rem 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("background3.jpg");
+    background-position: TOP;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+  }
+  #subscribe{
+    font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 2.0rem;
+    line-height: 3.5rem;
+    letter-spacing: 0.5rem;
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+            background-clip: text;
+  }
+
+
+
+  .signup-section .form-signup input {
+    box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
+    padding: 1.25rem 2rem;
+    height: auto;
+    font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 80%;
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+    border: 0;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  /* Contact section */
+  
+.contact-section {
+    padding-top: 5rem;
+  }
+  .contact-section .card {
+    border: 0;
+    border-bottom: 0.25rem solid #64a19d;
+    transition: 2s;
+    
+  }
+  .contact-section .card:hover{
+    
+    transform: scale(1.2);
+  }
+
+
+
+  .contact-section .card h4, .contact-section .card .h4 {
+    font-size: 0.8rem;
+    font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+  }
+  .contact-section .card hr {
+    border-color: #64a19d;
+    border-width: 0.25rem;
+    width: 3rem;
+  }
+  .contact-section .social {
+    margin-top: 5rem;
+  }
+  .contact-section .social a {
+    text-align: center;
+    height: 3rem;
+    width: 3rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 100%;
+    line-height: 3rem;
+    color: rgba(255, 255, 255, 0.3);
+  }
+  .contact-section .social a:hover {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .contact-section .social a:active {
+    color: #fff;
+  }
+  
+  .footer {
+    padding: 5rem 0;
+  }
+  .contact-section {
+    padding-top: 5rem;
+  }
+  .contact-section .card {
+    border: 0;
+    border-bottom: 0.25rem solid #64a19d;
+  }
+  .contact-section .card h4, .contact-section .card .h4 {
+    font-size: 0.8rem;
+    font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+  }
+  .contact-section .card hr {
+    border-color: #64a19d;
+    border-width: 0.25rem;
+    width: 3rem;
+  }
+  .contact-section .social {
+    margin-top: 5rem;
+  }
+  .contact-section .social a {
+    text-align: center;
+    height: 3rem;
+    width: 3rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 100%;
+    line-height: 3rem;
+    color: rgba(255, 255, 255, 0.3);
+  }
+  .contact-section .social a:hover {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .contact-section .social a:active {
+    color: #fff;
+  }
+  
+  .footer {
+    padding: 5rem 0;
+  }
+  .contact-section {
+    padding-top: 5rem;
+  }
+  .contact-section .card {
+    border: 0;
+    border-bottom: 0.25rem solid #64a19d;
+  }
+  .contact-section .card h4, .contact-section .card .h4 {
+    font-size: 0.8rem;
+    font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+  }
+  .contact-section .card hr {
+    border-color: #64a19d;
+    border-width: 0.25rem;
+    width: 3rem;
+  }
+  .contact-section .social {
+    margin-top: 5rem;
+  }
+  .contact-section .social a {
+    text-align: center;
+    height: 3rem;
+    width: 3rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 100%;
+    line-height: 3rem;
+    color: rgba(255, 255, 255, 0.3);
+  }
+  .contact-section .social a:hover {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .contact-section .social a:active {
+    color: #fff;
+  }
+  
+  .footer {
+    padding: 5rem 0;
+  }
+  
